@@ -93,7 +93,6 @@ var updateValues = function(){
 
 	$("#Zuschuss").text(zuschuss);
 	$("#Personen").text(personen);
-	$("#Zuschuss").text(zuschuss);
 	$("#Dauer").text(dauer);
 	$("#SROI").text(rToFixed(sROI,2));
 	$("#Wirksamkeit").text(wirksamkeit);
