@@ -1,1 +1,1 @@
-App for calculating the SROI
+App for calculating the SROI (social return on investment)
