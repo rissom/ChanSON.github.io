@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>ChanSON</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no>
+    <meta name="description" content="Examples for bootstrap-slider plugin">
+    <meta name="author" content="Thorsten Rissom, Oxford PV">
+    <meta name="background_color": content="#e7e7e7">
+
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Perovskite App">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-slider.min.css" rel="stylesheet">
+
+    <!-- javascript -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-slider.min.js"></script>
+ </head>
+
+ <style>
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+ </style>
+
+
+ <body> 
+ <div class="container">
+
+
+<h1><i>ChanSON</i></h1>
+<br/>
+
+<b style="font-size: 20px">SROI: <span id = "SROI"></span> € pro 1 € </b>
+<br/>
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Jahr 1</th>
+            <th>Jahr 2</th>
+            <th>Jahr 3</th>
+            <th>Gesamt</th>
+        </tr>
+    </thead>
+
+    <tr>
+        <td>
+            Einsparung (Bund): 
+        </td>
+        <td>
+            <span id = "Einsparungen_B_J1"></span> €
+        </td>
+        <td>
+            <span id = "Einsparungen_B_J2"></span> €
+        </td>
+        <td>
+            <span id = "Einsparungen_B_J3"></span> €
+        </td> 
+        <td>
+            <span id = "Einsparungen_B_Gesamt"></span> €
+        </td>       
+
+    </tr>
+    <tr>
+        <td>
+            Einsparung (Kommune):
+        </td>
+        <td>
+            <span id = "Einsparungen_K_J1"></span> €
+        </td>
+        <td>
+            <span id = "Einsparungen_K_J2"></span> €
+        </td>        
+        <td>
+            <span id = "Einsparungen_K_J3"></span> €
+        </td>        
+        <td>
+            <span id = "Einsparungen_K_Gesamt"></span> €
+        </td>           
+    </tr>
+    <tr>
+        <td>
+            Staatl. Einsparungen (Bund + Kommune): 
+        </td>
+        <td>
+            <span id = "Einsparungen_G_J1"></span> €
+        </td>
+        <td>
+            <span id = "Einsparungen_G_J2"></span> €
+        </td>
+        <td>
+            <span id = "Einsparungen_G_J3"></span> €
+        </td>
+        <td>
+            <span id = "Einsparungen_G_Gesamt"></span> €
+        </td>           
+    </tr>
+    <!--
+    <tr>
+        <td>
+            Lattice constant: &nbsp;&nbsp;
+        </td>
+        <td>
+            <span id="lc"></span> nm
+        </td>
+    </tr>
+    -->
+
+</table>
+<br />
+<br />
+
+
+<table>
+    <tr>
+        <td colspan="3">
+            <b>Zuschuss p. Monat: <span id="Zuschuss">&nbsp; €</b>
+        </td>
+    </tr>
+    <tr>
+    <td>
+        500&nbsp;€&nbsp;&nbsp;
+    </td>
+    <td>
+    <input
+        type="text"
+        id="slider1"
+        name="sl1"
+        data-provide="slider dings"
+        data-slider-min="500"
+        data-slider-max="1000"
+        data-slider-step="5"
+        data-slider-value="750"
+        data-slider-tooltip="hide"
+    >
+    </td>
+    <td>
+        &nbsp;&nbsp;1000&nbsp;€
+    </td>
+</tr>
+<tr>
+    <td colspan = "3">
+        <b>Geförderte Personen: <span id="Personen"> </b>
+    </td>
+</tr>
+<tr>
+    <td>
+        1
+        &nbsp;
+        &nbsp;
+    </td>
+    <td>
+    <input
+    type="text"
+    id="slider2"
+    name="sl2"
+    data-provide="slider dings2"
+    data-slider-min="1"
+    data-slider-max="1000"
+    data-slider-step="1"
+    data-slider-value="500"
+    data-slider-tooltip="hide"
+    >
+    </td>
+    <td>
+        &nbsp;
+        &nbsp;
+        1000
+    </td>
+</tr>
+<!-- <tr>
+    <td> 
+        &nbsp;
+    </td>
+</tr> -->
+<tr>
+    <td colspan = "3">
+        <b>Förderdauer: <span id="Dauer"></span> Monate</b>
+    </td>
+</tr>
+<tr>
+    <td>
+        6
+        &nbsp;
+        &nbsp;
+    </td>
+    <td>
+    <input
+    type="text"
+    id="slider3"
+    name="sl3"
+    data-provide="slider dings3"
+    data-slider-min="6"
+    data-slider-max="36"
+    data-slider-step="1"
+    data-slider-value="20"
+    data-slider-tooltip="hide"
+    >
+    </td>
+    <td>
+        &nbsp;
+        &nbsp;
+        36
+    </td>
+</tr>
+<tr>
+    <td colspan = "3">
+        <b>Wirksamkeit der Maßnahme: <span id="Wirksamkeit"></span> Monate</b>
+    </td>
+</tr>
+<tr>
+    <td>
+        6
+        &nbsp;
+        &nbsp;
+    </td>
+    <td>
+    <input
+    type="text"
+    id="slider4"
+    name="sl4"
+    data-provide="slider dings4"
+    data-slider-min="6"
+    data-slider-max="36"
+    data-slider-step="1"
+    data-slider-value="30"
+    data-slider-tooltip="hide"
+    >
+    </td>
+    <td>
+        &nbsp;
+        &nbsp;
+        24
+    </td>
+</tr>
+</table>
+
+<br/>
+<br/>
+<a href = "mailto: "
+<button style = "background-color: lightblue; padding:10px">
+    <b>Beratung anfordern</b>
+</button>
+</div>
+<script type="text/javascript" src="js/sroi.js"></script>
+<br/><br/>
+
+
+</body>
+
+
